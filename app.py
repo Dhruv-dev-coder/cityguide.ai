@@ -26,10 +26,14 @@ from twilio.twiml.messaging_response import MessagingResponse
 import time
 import threading
 import uuid
+import json
+
 load_dotenv()
 elevenlabs_client = ElevenLabs()
-cred_path = os.getenv("FIREBASE_CREDENTIALS_JSON")
-cred = credentials.Certificate(cred_path)
+
+firebase_json_str = os.getenv("FIREBASE_CREDENTIALS_JSON")
+cred_dict = json.loads(firebase_json_str)
+cred = credentials.Certificate(cred_dict)
 firebase_admin.initialize_app(cred)
 db = firestore.client()
 
@@ -1225,7 +1229,8 @@ def send_audio(to_number, text_to_speak):
         print(f"Audio saved as: {mp3_path} for user: {to_number}")
 
         # Send via Twilio
-        media_url = f'https://71949bf56fbd.ngrok-free.app/audio/{mp3_path}'
+        media_ngrok = os.getenv("MEDIA_URL_AUDIO")
+        media_url = f'{media_ngrok}/audio/{mp3_path}'
 
         message = client.messages.create(
             from_=f"whatsapp:{TWILIO_NUMBER}",
