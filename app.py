@@ -14,7 +14,7 @@ from dataclasses import dataclass
 import firebase_admin
 from firebase_admin import credentials, firestore
 import re
-from google import genai
+import google.generativeai as genai
 from serpapi import GoogleSearch
 import os
 import requests
@@ -201,7 +201,7 @@ class FirebaseUserManager:
             self.current_user_data['interests'] = interests_data
 
 user_manager = FirebaseUserManager(db)
-google_client = genai.Client()
+google_client = genai
 
 def transcribe_and_identify_language(audio_file_path: str):
     """
@@ -209,8 +209,8 @@ def transcribe_and_identify_language(audio_file_path: str):
     and returns the detected language and the transcribed text.
     """
     try:
-        myfile = google_client.files.upload(file=audio_file_path)
-        response = google_client.models.generate_content(
+        myfile = google_client.upload_file(audio_file_path)
+        response = google_client.generate_content(
             model="gemini-2.5-flash",
             contents=[
                 "First, identify the language of this audio clip. Then, provide a perfect word-for-word transcription. Format your response as: 'Language: [Detected Language]\nTranscription: [Perfect Transcription]'",
