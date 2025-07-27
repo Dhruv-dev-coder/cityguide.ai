@@ -8,7 +8,8 @@ transformers
 langgraph
 langgraph-prebuilt
 firebase-admin
-google-generativeai==0.8.5 # Pinned to a specific version for stability
+google-generativeai 
+google-api-core     
 google-search-results
 requests
 Flask
