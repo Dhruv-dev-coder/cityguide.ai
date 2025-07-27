@@ -3,13 +3,14 @@ wheel
 python-dotenv
 langchain
 langchain-core
+langchain-google-genai==2.1.5 # Re-added and pinned
 transformers
 langgraph
 langgraph-prebuilt
 firebase-admin
-google-generativeai==0.8.5 # Pinned to a specific version for stability
+google-generativeai==0.8.5
 google-api-core
-protobuf             # Explicitly added as a common dependency
+protobuf
 google-search-results
 requests
 Flask
