@@ -6,7 +6,7 @@ A multilingual AI-powered city guide that provides personalized travel recommend
 
 ## 👥 Credits
 
-**Developed by**: Teaam Syntax Squad [@Dhruv-dev-coder, @Achill3s01 and @Ghosty-Gigabytes] 
+**Developed by**: Team Syntax Squad [@Dhruv-dev-coder, @Achill3s01 and @Ghosty-Gigabytes] 
 **Version**: 1.0.0  
 **License**: MIT License  
 
