@@ -32,7 +32,6 @@ click==8.2.1
 blinker==1.9.0
 itsdangerous==2.2.0
 genai==2.1.0
-tiktoken==0.3.3
 numpy==2.3.2
 openai==0.27.10
 Pygments==2.19.2
