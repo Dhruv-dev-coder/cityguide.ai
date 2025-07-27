@@ -1146,7 +1146,7 @@ def incoming():
                 f.write(response.content)
 
             audio = AudioSegment.from_ogg(ogg_path)
-            audio.export(mp3_path, format="mp3")
+            audio.export(mp3_path, format="mp3",bitrate = "64k")
 
             detected_language, transcribed_text = transcribe_and_identify_language(mp3_path)
 
