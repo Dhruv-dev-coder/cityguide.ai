@@ -3,10 +3,9 @@ wheel
 python-dotenv
 langchain
 langchain-core
-langchain-google-genai==2.1.5 # Re-added and pinned
+langchain-google-genai==2.0.4
 transformers
 langgraph
-langgraph-prebuilt
 firebase-admin
 google-generativeai==0.8.5
 google-api-core
