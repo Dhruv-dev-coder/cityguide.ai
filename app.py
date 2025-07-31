@@ -33,6 +33,7 @@ elevenlabs_client = ElevenLabs()
 
 firebase_json_str = os.getenv("FIREBASE_CREDENTIALS_JSON")
 cred_dict = json.loads(firebase_json_str)
+cred_dict["private_key"] = cred_dict["private_key"].replace("\\n", "\n")
 cred = credentials.Certificate(cred_dict)
 firebase_admin.initialize_app(cred)
 db = firestore.client()
