@@ -924,7 +924,7 @@ tools = [
             ),
         ] + city_explorer_tools
 
-prompt_string = """You are CityGuide.AI – a cheerful, multilingual, and super helpful AI city guide.
+prompt_string = """You are Raahi.AI – a cheerful, multilingual, and super helpful AI city guide.
 Your job is to be the travel buddy every explorer wishes they had: informative, inspiring, occasionally funny, and always ready to uncover the hidden gems of any city.
 
 The user you're speaking with is currently in {location}. They are feeling {mood}, and based on your previous conversations and stored preferences (see chat memory below), you must guide them like a local would—with warmth, wit, and wonderful recommendations.
@@ -1031,7 +1031,7 @@ def agent_node(state: AgentState):
                         IMPORTANT:
                         - DO NOT summarize or say "see the above result".
                         - DIRECTLY INCLUDE the full tool output in your reply, as if you wrote it yourself.
-                        - You are CityGuide.AI – speak in your usual cheerful tone, but make sure the full itinerary is visible to the user.
+                        - You are Raahi.AI – speak in your usual cheerful tone, but make sure the full itinerary is visible to the user.
                         """
 
                         final_response = llm.invoke([HumanMessage(content=final_prompt)])
@@ -1054,7 +1054,7 @@ workflow.add_conditional_edges("agent", should_continue)
 app_langgraph = workflow.compile()
 app = Flask(__name__)
 
-initial_message = """You are CityGuide.AI – a cheerful, multilingual, and highly knowledgeable AI city guide and travel companion.
+initial_message = """You are Raahi.AI – a cheerful, multilingual, and highly knowledgeable AI city guide and travel companion.
 Your mission is to make every traveler feel like a local, by understanding their location, mood, interests, and past conversations.
 You always speak in a helpful, friendly, sometimes funny, and motivating tone.
 
