@@ -3,7 +3,7 @@ wheel
 python-dotenv
 langchain
 langchain-core
-langchain-google-genai==2.0.4
+langchain-google-genai
 transformers
 langgraph
 firebase-admin
@@ -18,3 +18,4 @@ elevenlabs
 twilio
 gunicorn
 torch
+
